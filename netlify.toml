@@ -1,4 +1,8 @@
 [build]
-  command = "npm run build"
-  publish = "dist"
+  publish = "build" # o dist, public, etc. según tu framework
+  command = "npm run build" # Comando que genera tu sitio
 
+[[redirects]]
+  from = "/*"
+  to = "/index.astro"
+  status = 200
