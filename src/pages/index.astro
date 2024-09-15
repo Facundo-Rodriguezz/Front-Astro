@@ -1,9 +1,10 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
+const pageTitle = "Pagina de inicio";
 ---
 
-<Layout title="Prueba.">
+<Layout title={pageTitle}>
 	<main>
 		<svg
 			class="astro-a"
@@ -35,7 +36,8 @@ import Card from '../components/Card.astro';
 		</svg>
 		<a href="/">Inicio</a>
        	<a href="/about/">Sobre mi</a>
-		<a href="/Blog/">Sitio Blog</a>
+		<a href="/blog/">Blog</a>
+
 		<h1>Bienvenido<span class="text-gradient">Facu</span></h1>
 		<p class="instructions">
 			To get started, open the directory <code>src/pages</code> in your project.<br />
