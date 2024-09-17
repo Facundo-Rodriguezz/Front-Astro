@@ -73,9 +73,16 @@ import Producto from '../components/Producto.astro';
 	<Footer />
 	<Producto />
 	<script>
-	  document.querySelector('.producto').addEventListener('click', () => {
-		document.querySelector('.nav-links').classList.toggle('expanded');
-	  });
+	const navLinks = document.querySelector('.nav-links');
+		if (navLinks) {
+		navLinks.classList.toggle('expanded');
+	}
+	const producto = document.querySelector('.producto');
+		if (producto) {
+		producto.addEventListener('click', () => {
+			// Tu lógica del manejador de eventos aquí
+		});
+	}
 	</script>
 	</main>
 </body>
