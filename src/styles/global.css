@@ -8,12 +8,11 @@ body {
   width: 100%;
   max-width: 80ch;
   padding: 1rem;
-  line-height: 1.5;w
+  line-height: 1.5;
 }
 
 * {
   box-sizing: border-box;
-  
 }
 
 h1 {
