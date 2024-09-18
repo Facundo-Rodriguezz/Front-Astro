@@ -1,0 +1,25 @@
+---
+import BaseLayout from './Layout.astro';
+const { frontmatter } = Astro.props;
+
+// Agregar verificaciones para asegurar que frontmatter y pubDate están definidos
+const title = frontmatter?.title ?? "Título no disponible";
+const pubDate = frontmatter?.pubDate ? new Date(frontmatter.pubDate).toString().slice(0, 10) : "Fecha no disponible";
+const description = frontmatter?.description ?? "Descripción no disponible";
+const author = frontmatter?.author ?? "Autor no disponible";
+const imageUrl = frontmatter?.image?.url ?? "";
+const imageAlt = frontmatter?.image?.alt ?? "Imagen";
+
+// Verifica que la imagen tiene URL antes de intentar usarla
+const imageElement = imageUrl ? <img src={imageUrl} width="300" alt={imageAlt} /> : null;
+
+---
+
+<BaseLayout pageTitle={frontmatter.title}>
+  <h1>{frontmatter.title}</h1>
+  <p>{frontmatter.pubDate.toString().slice(0,10)}</p>
+  <p><em>{frontmatter.description}</em></p>
+  <p>Escrito por: {frontmatter.author}</p>
+  <img src={frontmatter.image.url} width="300" alt={frontmatter.image.alt} />
+  <slot />
+</BaseLayout>
