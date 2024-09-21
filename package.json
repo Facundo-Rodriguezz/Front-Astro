@@ -12,7 +12,10 @@
   "dependencies": {
     "@astrojs/check": "^0.9.3",
     "@astrojs/netlify": "^5.5.2",
+    "@astrojs/preact": "^3.5.3",
+    "@astrojs/rss": "^4.0.7",
     "astro": "^4.15.4",
+    "preact": "^10.24.0",
     "typescript": "^5.5.4"
   }
 }
